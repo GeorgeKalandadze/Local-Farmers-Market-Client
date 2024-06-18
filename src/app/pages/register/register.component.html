@@ -1,0 +1,63 @@
+<!-- src/app/pages/register/register.component.html -->
+<div class="flex justify-center items-center min-h-screen bg-gray-100">
+  <div class="bg-gray-700 text-white rounded-lg p-8 w-96">
+    <h2 class="text-3xl font-bold mb-8">Register</h2>
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+      <div class="mb-6">
+        <label for="email" class="block">Email</label>
+        <input
+          type="email"
+          id="email"
+          required
+          [(ngModel)]="model.email"
+          name="email"
+          class="w-full px-3 py-2 bg-transparent text-white border-b-2 border-gray-600 focus:outline-none focus:border-green-800"
+          #email="ngModel"
+        />
+        <div *ngIf="email.invalid && email.touched" class="text-red-500 text-sm mt-1">
+          Email is required
+        </div>
+      </div>
+      <div class="mb-6">
+        <label for="password" class="block">Password</label>
+        <input
+          type="password"
+          id="password"
+          required
+          [(ngModel)]="model.password"
+          name="password"
+          class="w-full px-3 py-2 bg-transparent text-white border-b-2 border-gray-600 focus:outline-none focus:border-green-800"
+          #password="ngModel"
+        />
+        <div *ngIf="password.invalid && password.touched" class="text-red-500 text-sm mt-1">
+          Password is required
+        </div>
+      </div>
+      <div class="mb-6">
+        <label for="confirmPassword" class="block">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          required
+          [(ngModel)]="model.confirmPassword"
+          name="confirmPassword"
+          class="w-full px-3 py-2 bg-transparent text-white border-b-2 border-gray-600 focus:outline-none focus:border-green-800"
+          #confirmPassword="ngModel"
+        />
+        <div *ngIf="confirmPassword.invalid && confirmPassword.touched" class="text-red-500 text-sm mt-1">
+          Confirm Password is required
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-green-800 hover:bg-gray-600 text-white py-2 rounded-md transition duration-200"
+        [disabled]="registerForm.form.invalid"
+      >
+        Register
+      </button>
+    </form>
+    <p class="mt-6 text-center text-gray-400">
+      Already have an account? <a routerLink="/login" class="text-white">Log In</a>
+    </p>
+  </div>
+</div>
