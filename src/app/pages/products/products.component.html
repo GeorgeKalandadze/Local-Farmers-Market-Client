@@ -1,13 +1,16 @@
 <div class="flex">
-  <app-filter-sidebar class="w-1/4"></app-filter-sidebar> <!-- Sidebar will take 25% width -->
+  <app-filter-sidebar class="w-1/4"></app-filter-sidebar>
   <div class="w-3/4 px-8">
-    <div class="grid grid-cols-3 gap-4"> <!-- Grid with 3 columns and a gap between items -->
+    <div class="grid grid-cols-3 gap-4">
       <app-product-card></app-product-card>
       <app-product-card></app-product-card>
       <app-product-card></app-product-card>
       <app-product-card></app-product-card>
       <app-product-card></app-product-card>
       <app-product-card></app-product-card>
+    </div>
+    <div class="flex justify-center py-4">
+      <app-pagination></app-pagination>
     </div>
   </div>
 </div>

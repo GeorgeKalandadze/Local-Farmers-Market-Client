@@ -2,11 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FilterSidebarComponent } from '../../components/filter-sidebar/filter-sidebar.component';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { NgClass, NgStyle } from '@angular/common';
+import { PaginationComponent } from '../../components/pagination/pagination.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [FilterSidebarComponent, ProductCardComponent],
+  imports: [FilterSidebarComponent, ProductCardComponent, PaginationComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })
