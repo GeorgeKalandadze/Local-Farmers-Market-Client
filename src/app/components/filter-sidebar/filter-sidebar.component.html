@@ -1,0 +1,80 @@
+<div class="p-4">
+  <h2 class="text-lg font-bold mb-4">Filter</h2>
+
+  <div class="mb-8">
+    <div class="flex justify-between items-center mb-2">
+      <label class="font-medium">Price</label>
+      <button class="text-sm text-gray-500 flex items-center" (click)="resetPrices()">
+        <span>Reset</span>
+        <span class="ml-1">🗑️</span>
+      </button>
+    </div>
+    <div class="flex justify-between mt-2">
+      <div class="flex items-center">
+        <p class="text-[12px]">MIN:</p>
+        <input
+          type="number"
+          class="border p-1 mx-2 w-[100px]"
+          [(ngModel)]="minPrice"
+          (input)="updatePriceRange()"
+        />
+        ₾
+      </div>
+      <div class="flex items-center">
+        <p class="text-[12px]">MAX:</p>
+        <input
+          type="number"
+          class="border p-1 mx-2 w-[100px]"
+          [(ngModel)]="maxPrice"
+          (input)="updatePriceRange()"
+        />
+        ₾
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-8">
+    <div class="flex justify-between items-center mb-2">
+      <label class="font-medium">Stock</label>
+      <button class="text-sm text-gray-500 flex items-center" (click)="resetStock()">
+        <span>Reset</span>
+        <span class="ml-1">🗑️</span>
+      </button>
+    </div>
+    <div class="flex justify-between mt-2">
+      <div class="flex items-center">
+        <p class="text-[12px]">MIN:</p>
+        <input
+          type="number"
+          class="border p-1 mx-2 w-[100px]"
+          [(ngModel)]="minStock"
+          (input)="updateStockRange()"
+        />
+      </div>
+      <div class="flex items-center">
+        <p class="text-[12px]">MAX:</p>
+        <input
+          type="number"
+          class="border p-1 mx-2 w-[100px]"
+          [(ngModel)]="maxStock"
+          (input)="updateStockRange()"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label class="block mb-2 font-medium">Categories</label>
+    <div *ngFor="let category of categories">
+      <label class="flex items-center mb-2">
+        <input
+          type="checkbox"
+          class="form-checkbox"
+          [(ngModel)]="selectedCategories"
+          [value]="category"
+        />
+        <span class="ml-2">{{ category }}</span>
+      </label>
+    </div>
+  </div>
+</div>

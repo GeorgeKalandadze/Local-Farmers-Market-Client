@@ -1,0 +1,7 @@
+.background-image {
+            background-image: url('../../../assets/farm.jpg');
+}
+
+#background-container {
+    transition: opacity 1s ease-in-out;
+}

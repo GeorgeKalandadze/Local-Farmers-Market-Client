@@ -1,0 +1,43 @@
+
+<div>
+    <div class="relative w-full h-screen">
+        <div id="background-container" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000" [ngStyle]="{'background-image': 'url(' + currentImage + ')', 'opacity': currentOpacity}">
+        </div>
+        <div class="absolute inset-0 px-8 bg-black bg-opacity-50 flex flex-col justify-center items-start  text-white">
+            <h1 class="text-4xl md:text-4xl font-bold mb-4">Welcome to the Farm</h1>
+            <p class="text-xl md:text-xl mb-6 w-[800px]">
+                Experience the best of nature. Our farm offers a unique and immersive experience where you can 
+                connect with the beauty and tranquility of the countryside. From lush fields to charming 
+                farm animals, every visit promises a memorable adventure. Enjoy fresh produce, 
+                take part in farm activities, and learn about sustainable farming practices. 
+                Discover the joys of rural life and make lasting memories with family and friends.
+            </p>
+            <button class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded">
+                Learn More
+            </button>
+        </div>
+    </div>
+    <div class="flex justify-between w-full flex-wrap px-8 bg-gray-300">
+        <app-product-card>
+
+        </app-product-card>
+        <app-product-card>
+            
+        </app-product-card>
+        <app-product-card>
+            
+        </app-product-card>
+        <app-product-card>
+            
+        </app-product-card>
+        <app-product-card>
+            
+        </app-product-card>
+        <app-product-card>
+            
+        </app-product-card>
+    </div>
+    <div class="bg-gray-300 text-center py-4">
+         <a routerLink="/products" class="cursor-pointer text-green-900 text-[20px]">See all</a>
+    </div>
+</div>
